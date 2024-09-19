@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>color Change</title>
+
+    <style>
+      .bg-black {
+        background-color: rgba(0, 0, 0, 0.908);
+        color: aliceblue;
+      }
+      #display {
+        width: 500px;
+        height: 10px;
+        border: 1px solid white;
+      }
+      .button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div class="parent">
+      <h1 id="title" class="heading">color changer</h1>
+      <p>where you just have to click color .</p>
+
+      <h2 class="button" id="red">RED</h2>
+      <h2 class="button" id="blue">BLUE</h2>
+      <h2 class="button" id="gray">GRAY</h2>
+      <h2 class="button" id="yellow">YELLOW</h2>
+      <h2 class="button" id="white">WHITE</h2>
+
+      <div id="display"></div>
+    </div>
+  </body>
+  <script>
+    const buttons = document.querySelectorAll(".button");
+    const display = document.querySelector("#display");
+    // console.log(buttons,display);
+    buttons.forEach(function (button) {
+      // console.log(button);
+      button.addEventListener("click", function (e) {
+        // console.log(e.target.id);
+        if (e.target.id === "red") {
+          display.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "blue") {
+          display.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "gray") {
+          display.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "yellow") {
+          display.style.backgroundColor = e.target.id;
+        }
+        if (e.target.id === "white") {
+          display.style.backgroundColor = e.target.id;
+        }
+      });
+    });
+  </script>
+</html>
